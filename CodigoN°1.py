@@ -30,14 +30,20 @@ def division(val1, val2):
         print(f"El resultado de {val1} / {val2} es: {resultado}")
 
 def factorial(val1):
+        resultado = factorial(val1)
         r=1
         i = 2
         while i <= val1:
             r *= i
             i += 1
+            print(f"el resultado es del factorial {val1} es : {resultado}")
         return r
-        Resultado = factorial(val1)
-        print(f"el resultado es del factorial {val1} es : {Resultado}")
+
+def potencias (val1 , val2) :
+    resultado = val1 ** val2 
+    print(f"El resultado de {val1} elevado a {val2} es : {resultado}")
+
+    
 
 # INICIO DEL PROGRAMA
 while True:
@@ -45,11 +51,10 @@ while True:
 
     opcion = int(input("Ingrese la opción deseada: "))
 
-    if opcion in [1, 2, 3, 4, 5]:
+    if opcion in [1, 2, 3, 4, 5, 6]:
         val1 = float(input("Ingrese la primera variable: "))
-        if opcion != 5 :
-         val2 = float(input("Ingrese la segunda variable: "))
-
+        if opcion in [1, 2, 3, 4, 6]:
+            val2 = float(input("Ingrese la segunda variable: "))
         if opcion == 1:
             suma(val1, val2)
         elif opcion == 2:
@@ -59,10 +64,12 @@ while True:
         elif opcion == 4:
             division(val1, val2)
         elif opcion == 5 :
-            val1 = int(input("ingrese el factorial: "))
             factorial(val1)
-       
-    elif opcion == 6:
+        elif opcion == 6 :
+            potencias(val1,val2)
+        
+
+    elif opcion == 7:
         vector1 = [0, 0, 0]
         vector2 = [0, 0, 0]
         Rvector = [0, 0, 0]
@@ -89,7 +96,7 @@ while True:
             Rvector[i] = vector1[i] + vector2[i]
         print("Resultado de la suma de vectores:", Rvector)
 
-    elif opcion == 6:
+    elif opcion == 8:
         print("Gracias por usar la calculadora. ¡Hasta luego!")
         break
 
