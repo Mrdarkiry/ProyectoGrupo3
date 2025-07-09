@@ -1,4 +1,15 @@
 # FUNCIONES DEFINIDAS FUERA DEL BUCLE
+def menu():
+    print("\n-BIENVENIDOS ")
+    print("1- SUMA")    
+    print("2- RESTA")
+    print("3- MULTIPLICACION")
+    print("4- DIVISION")
+    print("5- FACTORIALES")
+    print("6- POTENCIAS")    
+    print("7- OPERACIONES CON VECTORES")
+    print("8- SALIR")
+
 def suma(val1, val2):
     resultado = val1 + val2
     print(f"El resultado de {val1} + {val2} es: {resultado}")
@@ -30,16 +41,8 @@ def factorial(val1):
 
 # INICIO DEL PROGRAMA
 while True:
-    print("\n-BIENVENIDOS ")
-    print("1- SUMA")    
-    print("2- RESTA")
-    print("3- MULTIPLICACION")
-    print("4- DIVISION")
-    print("5- FACTORIALES")
-    print("6- POTENCIAS")    
-    print("7- OPERACIONES CON VECTORES")
-    print("8- SALIR")
-   
+    menu()
+
     opcion = int(input("Ingrese la opción deseada: "))
 
     if opcion in [1, 2, 3, 4, 5]:
@@ -57,17 +60,8 @@ while True:
             division(val1, val2)
         elif opcion == 5 :
             val1 = int(input("ingrese el factorial: "))
-            val2 = ""
-        def factorial(val1):
-            r=1
-            i = 2
-            while i <= val1:
-             r *= i
-             i += 1
-            return r
-        Resultado = factorial(val1)
-        print(f"el resultado es del factorial {val1} es : {Resultado}")
-
+            factorial(val1)
+       
     elif opcion == 6:
         vector1 = [0, 0, 0]
         vector2 = [0, 0, 0]
